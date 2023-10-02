@@ -23,8 +23,9 @@ class GPayPod(private val activityContext: Activity?) {
         }
     }
 
+    /*getting stableHardwareId and walletId, its required for Google Encryption API to get opc payload*/
     fun getGooglePayWalletRequiredDetails(iStableHardwareIdAndWalletId: IStableHardwareIdAndWalletId?,
-                                       iResponseFromSdkToApp: IResponseFromSdkToApp?){
+                                          iResponseFromSdkToApp: IResponseFromSdkToApp?) {
         try {
 
             /*validating the input parameters*/
@@ -65,10 +66,9 @@ class GPayPod(private val activityContext: Activity?) {
      * This payload contains the card information of the Card Holder and its details
      * */
     fun makeAddToGooglePayWalletRequest(iResponseFromSdkToApp : IResponseFromSdkToApp?,
-                                  opcPayloadData : String?,
-                                  cardDetails: CardDetails?,
-                                  userAddressDetails : UserAddressDetails?) {
-
+                                        opcPayloadData : String?,
+                                        cardDetails: CardDetails?,
+                                        userAddressDetails : UserAddressDetails?) {
         try {
 
             /*validating the input parameters*/
