@@ -10,6 +10,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        jcenter()
+        maven ( url = "file:/C:/tools/m2repository/")
     }
 }
 
