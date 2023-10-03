@@ -12,7 +12,7 @@ import com.library.gpaypod.models.UserAddressDetails
 import com.library.gpaypod.utils.Constants
 import com.library.gpaypod.utils.Util
 
-public class GPayPod(private val activityContext: Activity?) {
+class GPayPod(private val activityContext: Activity?) {
 
     private var tapAndPayClient: TapAndPayClient? = null
     private var requestCodePushTokenize = 10
@@ -24,7 +24,7 @@ public class GPayPod(private val activityContext: Activity?) {
     }
 
     /*getting stableHardwareId and walletId, its required for Google Encryption API to get opc payload*/
-    public fun getGooglePayWalletRequiredDetails(iStableHardwareIdAndWalletId: IStableHardwareIdAndWalletId?,
+    fun getGooglePayWalletRequiredDetails(iStableHardwareIdAndWalletId: IStableHardwareIdAndWalletId?,
                                           iResponseFromSdkToApp: IResponseFromSdkToApp?) {
         try {
 
@@ -65,7 +65,7 @@ public class GPayPod(private val activityContext: Activity?) {
      * on your backend API server.
      * This payload contains the card information of the Card Holder and its details
      * */
-    public fun makeAddToGooglePayWalletRequest(iResponseFromSdkToApp : IResponseFromSdkToApp?,
+    fun makeAddToGooglePayWalletRequest(iResponseFromSdkToApp : IResponseFromSdkToApp?,
                                         opcPayloadData : String?,
                                         cardDetails: CardDetails?,
                                         userAddressDetails : UserAddressDetails?) {
